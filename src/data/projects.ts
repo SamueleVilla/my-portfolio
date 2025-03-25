@@ -9,7 +9,7 @@ export interface IProject {
   githubUrl?: string;
   liveUrl?: string;
   figmaUrl?: string;
-  category: IProjectCategory;
+  category: IProjectCategory[];
 }
 
 export const PROJECTS: IProject[] = [
@@ -18,19 +18,18 @@ export const PROJECTS: IProject[] = [
     title: "Portfolio Website Design",
     description:
       "A modern, responsive portfolio design for creative professionals with dark mode theme and smooth animations.",
-    image: "/images/projects/portfolio-design.jpg",
+    image: "images/projects/portfolio.png",
     technologies: ["Figma", "Adobe Photoshop", "Illustrator"],
-    figmaUrl: "https://figma.com/file/portfolio-design",
-    category: "frontend",
+    category: ["frontend"],
   },
   {
     id: 4,
-    title: "Sudoku Solver",
+    title: "Sudoku Cheat",
     description:
       "A Sudoku solver web app that uses backtracking algorithm to solve any valid Sudoku puzzle.",
-    image: "/images/projects/sudoku-solver.jpg",
+    image: "images/projects/sudoku-solver.png",
     technologies: ["HTML", "CSS", "Typescript", "React"],
-    category: "frontend",
-    githubUrl: "",
+    category: ["frontend", "games"],
+    githubUrl: "https://github.com/SamueleVilla/sudoku-cheat",
   },
 ];

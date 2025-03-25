@@ -52,7 +52,7 @@ const Projects = () => {
       setVisibleProjects(PROJECTS);
     } else {
       setVisibleProjects(
-        PROJECTS.filter((project) => project.category === activeFilter)
+        PROJECTS.filter((project) => project.category.includes(activeFilter))
       );
     }
 
