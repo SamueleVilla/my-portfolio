@@ -1,0 +1,14 @@
+# Ignore artifacts:
+build
+dist
+coverage
+node_modules
+
+# Ignore specific file types
+*.svg
+*.html
+*.md
+*.json
+
+# Specific files to ignore
+.DS_Store
