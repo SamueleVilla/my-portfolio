@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
+import capitalize from "../../utils/capitalize";
+
+const sections = ["home", "about", "projects", "contact"];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +17,6 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
 
       // Determine which section is currently in view
-      const sections = ["home", "about", "projects", "contact"];
       let currentSection = "home";
 
       for (const section of sections) {
@@ -60,46 +62,18 @@ const Header = () => {
 
         <nav className={`header__nav ${isMenuOpen ? "header__nav--open" : ""}`}>
           <ul className="header__nav-list">
-            <li className="header__nav-item">
-              <a
-                className={`header__nav-link ${
-                  activeSection === "home" ? "header__nav-link--active" : ""
-                }`}
-                onClick={() => scrollToSection("home")}
-              >
-                Home
-              </a>
-            </li>
-            <li className="header__nav-item">
-              <a
-                className={`header__nav-link ${
-                  activeSection === "about" ? "header__nav-link--active" : ""
-                }`}
-                onClick={() => scrollToSection("about")}
-              >
-                About
-              </a>
-            </li>
-            <li className="header__nav-item">
-              <a
-                className={`header__nav-link ${
-                  activeSection === "projects" ? "header__nav-link--active" : ""
-                }`}
-                onClick={() => scrollToSection("projects")}
-              >
-                Projects
-              </a>
-            </li>
-            <li className="header__nav-item">
-              <a
-                className={`header__nav-link ${
-                  activeSection === "contact" ? "header__nav-link--active" : ""
-                }`}
-                onClick={() => scrollToSection("contact")}
-              >
-                Contact
-              </a>
-            </li>
+            {sections.map((section) => (
+              <li key={section} className="header__nav-item">
+                <a
+                  className={`header__nav-link ${
+                    activeSection === section ? "header__nav-link--active" : ""
+                  }`}
+                  onClick={() => scrollToSection(section)}
+                >
+                  {capitalize(section)}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
 
