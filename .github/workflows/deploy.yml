@@ -9,6 +9,10 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+      pages: read
+      id-token: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -26,7 +30,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: actions/deploy-pages@v4
         with:
           folder: dist # The folder the action should deploy (output of your build)
           branch: gh-pages # The branch the action should deploy to
