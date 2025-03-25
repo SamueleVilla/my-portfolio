@@ -81,7 +81,7 @@ const About = () => {
           >
             <div className="about__image">
               <img
-                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.d8zuVqQAzPRDL5TsXNpf2gHaE8%26pid%3DApi&f=1&ipt=06dd86337fadafdfa742df2ce5d392963cd9d29a009eeff60ceeda2f615d27c2&ipo=images"
+                src="images/about-me.jpg"
                 alt="Samuele working on his laptop"
               />
             </div>

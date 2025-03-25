@@ -56,7 +56,7 @@ const Hero = () => {
       >
         <div className="hero__profile-container">
           <div className="hero__profile-photo">
-            <img src="/images/profile.jpg" alt="Profile" />
+            <img src="images/profile.jpg" alt="Profile" />
             <div className="hero__profile-border"></div>
             <div className="hero__profile-status">
               <span className="hero__status-dot"></span>
